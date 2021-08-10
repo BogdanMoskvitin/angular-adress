@@ -1,0 +1,44 @@
+<div class="menu">
+    <p class="menu__title">Меню</p>
+    <div class="menu__cell">
+        <img src="../../assets/vectors/home.svg" alt="home" class="menu__img">
+        <a routerLink="home">Главная</a>
+    </div>
+    <div class="menu__cell">
+        <img src="../../assets/vectors/search-black.svg" alt="search" class="menu__img">
+        <a routerLink="search">Поиск адресов</a>
+    </div>
+    <div class="menu__cell">
+        <img src="../../assets/vectors/table.svg" alt="tables" class="menu__img">
+        <a routerLink="table">Таблицы</a>
+    </div>
+    <div class="menu__cell">
+        <img src="../../assets/vectors/calendar.svg" alt="calendar" class="menu__img">
+        <a routerLink="calendar">Календарь</a>
+    </div>
+    <div class="menu__cell">
+        <img src="../../assets/vectors/map.svg" alt="map" class="menu__img">
+        <a routerLink="map">Карты</a>
+    </div>
+    <div class="menu__cell">
+        <img src="../../assets/vectors/vidget.svg" alt="vidget" class="menu__img">
+        <a routerLink="vidget">Виджеты</a>
+    </div>
+    <div class="menu__cell" (click)="openSettings()">
+        <img src="../../assets/vectors/setting.svg" alt="setting" class="menu__img">
+        <a routerLink="setting">Настройки</a>
+        <img src="../../assets/vectors/triangle.svg" alt="triangle" class="triangle" [ngClass]="{'triangle-active': opened}">
+    </div>
+    <div class="menu__cell_min" [ngClass]="{'close': !opened}">
+        <img src="../../assets/vectors/user.svg" alt="user" class="menu__img">
+        <a routerLink="user">Настройки <br>профиля</a>
+    </div>
+    <div class="menu__cell_min" [ngClass]="{'close': !opened}">
+        <img src="../../assets/vectors/finance.svg" alt="finance" class="menu__img">
+        <a routerLink="finance">Управление <br>финансами</a>
+    </div>
+    <div class="menu__cell">
+        <img src="../../assets/vectors/exit.svg" alt="exit" class="menu__img">
+        <a routerLink="exit">Выход</a>
+    </div>
+</div>

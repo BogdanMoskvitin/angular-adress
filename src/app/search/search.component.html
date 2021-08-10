@@ -1,0 +1,25 @@
+<div class="search">
+    <p class="title">Поиск адресов</p>
+    <p class="subtitle">Введите интересующий вас адрес</p>
+    <form>
+        <input [(ngModel)]="query" name="firstName" minlength="3" type="text" placeholder="Введите интересующий вас адрес">
+        <button type="submit" (click)="search()">
+            <img src="../../assets/vectors/search-white.svg" alt="search">
+            <span>Поиск</span>
+        </button>
+    </form>
+
+    <div class="addresses__box">
+        <p class="addresses__title">Адреса</p>
+    
+        <div class="item" *ngFor="let item of obj">
+            <div class="line"></div>
+            {{ item.data.city_type_full }}
+            {{ item.data.city }},
+            {{ item.data.street_type_full }}
+            {{ item.data.street }},
+            {{ item.data.house_type_full }}
+            {{ item.data.house }}
+        </div>
+    </div>
+</div>
